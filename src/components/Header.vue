@@ -4,10 +4,10 @@
             <a class="navbar-brand" href="/">PIZZA PLANET</a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">home</a>
+                    <router-link to="/"><a class="nav-link">home</a></router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">menu</a>
+                    <router-link to="/menu"><a class="nav-link">menu</a></router-link>
                 </li>
             </ul>    
         </nav>
