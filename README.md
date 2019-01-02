@@ -16,3 +16,7 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### Firebase Config
+The firebase config is in a gitignore file at src/firebaseConfig.js
+
