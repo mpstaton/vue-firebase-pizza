@@ -51,16 +51,24 @@
             </table>  
         </div>
     </div>
+
+    <div class="row"></div>
+        <div class="col-sm-12 col-lg-6">
+            <pp-login></pp-login>
+        </div>
+
     </div>
 
 </template>
 
 <script>
     import NewPizza from './NewPizza.vue'
+    import Login from './Login.vue'
 
 export default {
     components: {
-        ppNewPizza: NewPizza
+        ppNewPizza: NewPizza,
+        ppLogin: Login
     }
 }
 </script>
