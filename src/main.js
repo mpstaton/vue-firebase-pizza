@@ -8,11 +8,15 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/menu', component: Menu }
+  { path: '/menu/:items', component: Menu },
+  { path: '*', redirect: '/'}
 ]
 
+//history is a feature of Vue that manages urls
+
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 new Vue({

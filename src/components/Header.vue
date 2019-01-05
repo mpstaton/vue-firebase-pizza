@@ -4,13 +4,25 @@
             <a class="navbar-brand" href="/">PIZZA PLANET</a>
             <div>
             <ul class="navbar-nav">
-                <router-link to="/" tag="li"><a class="nav-link">home</a></router-link>
-                <router-link to="/menu" tag="li"><a class="nav-link">menu</a></router-link>
+                <router-link :to="homeLink" tag="li"><a class="nav-link">home</a></router-link>
+                <router-link :to="menuLink" tag="li"><a class="nav-link">menu</a></router-link>
             </ul>
             </div>    
         </nav>
     </header>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            homeLink: '',
+            menuLink: '',
+        }
+    }
+}
+</script>
+
 
 <style>
     .header {
