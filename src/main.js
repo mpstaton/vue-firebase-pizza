@@ -14,14 +14,14 @@ import { isAbsolute } from 'path';
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/menu/:items', component: Menu },
-  { path: '/admin', component: Admin },
-  { path: '/about', component: About, children: [
-    { path: 'contact', component: Contact },
-    { path: 'history', component: History },
-    { path: 'delivery', component: Delivery },
-    { path: 'ordering-guide', component: OrderingGuide }
+  { path: '/', name: 'homeLink', component: Home },
+  { path: '/menu/', name: 'menuLink', component: Menu },
+  { path: '/admin', name: 'adminLink', component: Admin },
+  { path: '/about', name: 'aboutLink', component: About, children: [
+    { path: 'contact', name: 'contactLink', component: Contact },
+    { path: 'history', name: 'historyLink', component: History },
+    { path: 'delivery', name: 'deliveryLink', component: Delivery },
+    { path: 'ordering-guide', name: 'orderingGuideLink', component: OrderingGuide }
   ]},
   { path: '*', redirect: '/'}
 ]

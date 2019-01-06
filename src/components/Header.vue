@@ -4,8 +4,8 @@
             <a class="navbar-brand" href="/">PIZZA PLANET</a>
             <div>
             <ul class="navbar-nav">
-                <router-link :to="homeLink" tag="li"><a class="nav-link">home</a></router-link>
-                <router-link :to="menuLink" tag="li"><a class="nav-link">menu</a></router-link>
+                <router-link :to="{ name: 'homeLink' }" tag="li"><a class="nav-link">home</a></router-link>
+                <router-link :to="{ name: 'menuLink' }" tag="li"><a class="nav-link">menu</a></router-link>
             </ul>
             </div>    
         </nav>
@@ -14,12 +14,7 @@
 
 <script>
 export default {
-    data() {
-        return {
-            homeLink: '',
-            menuLink: '',
-        }
-    }
+
 }
 </script>
 
