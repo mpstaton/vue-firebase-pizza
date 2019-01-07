@@ -14,9 +14,9 @@
                        <th>Remove from menu</th>
                    </tr>
                 </thead>
-                <tbody>
+                <tbody v-for="item in getMenuItems">
                     <tr>
-                        <td>Margherita</td>
+                        <td>{{ item.name }}</td>
                         <td><button class="btn btn-outline-danger btn-sm">x</button></td>
                     </tr>
                 </tbody>
