@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import { routes } from './routes';
 import App from './App.vue';
+import { store } from './store/store.js'
 import { isAbsolute } from 'path';
 
 Vue.use(VueRouter)
@@ -29,5 +30,6 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
