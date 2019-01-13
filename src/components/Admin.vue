@@ -103,3 +103,10 @@ export default {
 }
 </script>
 
+<style>
+    .order-number {
+        margin: 10px 0;
+    }
+</style>
+
+

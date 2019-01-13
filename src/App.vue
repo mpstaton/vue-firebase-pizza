@@ -44,7 +44,17 @@ export default {
 </script>
 
 <style>
+  header, footer {
+    background: #ECEEEF;
+    padding: 40px 0;
+    font-size: 1.2em;
+  }
 
+  .card {
+    background-color: #69AB64;
+    margin: 20px 0;
+    border-radius: 0;
+  }
 
 
 </style>
