@@ -93,7 +93,7 @@ export default {
             item.quantity--;
         },
         addNewOrder() {
-            this.$store.commit('addOrder')
+            this.$store.commit('addOrder', this.basket)
             this.basket = []
             this.basketText = "Thank you,your order has been placed"
         }

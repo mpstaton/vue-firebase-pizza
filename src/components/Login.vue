@@ -1,6 +1,10 @@
 <template>
     
     <div class="row">
+        <div>
+        <div>
+            <p>Logged in as: <br> {{ currentUser }} </p>
+        </div>
         <form>
             <div class="form-group">
                 <label>Email</label>
@@ -15,12 +19,23 @@
                 <button type="button" class="btn btn-danger" @click.prevent="signOut">Sign out</button>
             </div>
         </form>
+        </div>
     </div>
 
 </template>
 
 <script>
 import Firebase from 'firebase'
+import { store } from '../store/store.js'
+
+
+Firebase.auth().onAuthStateChanged(function(user){
+    if(user) {
+        store.dispatch('setUser', user)
+    } else {
+        store.dispatch('setUser', null)
+    }
+})
 
 export default {
     methods: {
@@ -45,6 +60,11 @@ export default {
             }).catch(function(error) {
                 alert('error.')
             });
+        }
+    },
+    computed: {
+        currentUser() {
+            return this.$store.getters.currentUser
         }
     }
 }
